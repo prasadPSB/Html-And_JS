@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Multiply Array Elements By 2</title>
+    <script>
+        function processArray() {
+            let userInput = document.getElementById("arrayInput").value;
+            let array = []
+            array = userInput.split(',');
+            console.log('array: ', array);
+
+            let doubledArrray = [];
+            for (i = 0; i < array.length; i++) {
+                doubledArrray.push(array[i] * 2);
+            }
+            document.getElementById("result").innerText = "Result:" + doubledArrray.join(',');
+        }
+    </script>
+</head>
+
+<body>
+    <label for="arrayInput">Enter the numbers:</label>
+    <input type="text" id="arrayInput">
+    <button onclick="processArray()">Submit</button>
+    <span id="result"></span>
+
+</body>
+
+</html>
