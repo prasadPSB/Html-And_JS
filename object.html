@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arrayOfObject=[];
+        function SeperateObjects() {
+            let firstname = document.getElementById("obj1").value;
+            let lastname = document.getElementById("obj2").value;
+            let ArrayObject={
+                "firstname":firstname,
+                "lastname":lastname
+            }
+            console.log('ArrayObject: ', ArrayObject);
+           arrayOfObject.push(ArrayObject)
+           console.log('arrayOfObject: ', arrayOfObject);
+           document.getElementById("result").innerText=JSON.stringify(arrayOfObject)
+        }
+    </script>
+</head>
+
+<body>
+    <label>Enter the Array:</label>
+    <input type="text" id="obj1">
+    <input type="text" id="obj2">
+    <button onclick="SeperateObjects()">submit</button>
+    <div id="result"></div>
+
+</body>
+
+</html>
