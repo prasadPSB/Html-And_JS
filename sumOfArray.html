@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Array Elements</title>
+    <script>
+        function SumOfArray() {
+            let userInput = document.getElementById("inputArray").value;
+            let arraySum = 0;
+            array = userInput.split(',');
+            array.map((Element) => {
+                arraySum =parseInt(Element)+arraySum;
+
+            })
+            document.getElementById("result").innerText = arraySum;
+
+        }
+    </script>
+</head>
+
+<body>
+    <label>Enter Array :</label>
+    <input type="text" id="inputArray">
+    <button onclick="SumOfArray()">Submit</button>
+    <div id="result"></div>
+</body>
+
+</html>
