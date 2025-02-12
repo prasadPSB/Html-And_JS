@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arrayOfObject = [
+            { name: 'prasad', lastname: 'bhor', age: 21 },
+            { name: 'rohan', lastname: 'takalkar', age: 19 },
+            { name: 'yash', lastname: 'shelke', age: 20 }
+        ];
+        function searchingObject() {
+            let nameToSearch = document.getElementById("nameToSearch").value;
+            arrayOfObject.map((Element) => {
+                if (Element.name == nameToSearch) {
+                    document.getElementById("result").innerText = Element.name+Element.age;
+                    console.log(+name, +age, +lastname)
+                }
+                else {
+                    document.getElementById("result").innerText = "Element is not found"
+                }
+            });
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <label>
+        Enter the element you want to search:
+    </label>
+    <input type="text" id="nameToSearch">
+    <button onclick="searchingObject()">Submit</button>
+    <div id="result"></div>
+</body>
+
+</html>
