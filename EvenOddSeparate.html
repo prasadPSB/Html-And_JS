@@ -1,19 +1,36 @@
 <html>
-    <head>
-        <title>Even-Odd Separate Array</title>
-        <script>
-            function EvenOddSeparate(){
+
+<head>
+    <title>EvenOdd Separate</title>
+    <script>
+        function EvenOddSeparate() {
+            let ArrayInput = document.getElementById("userInput").value;
+            let EvenArray = [];
+            let OddArray = [];
+                ArrayInput = ArrayInput.split(',');
+            for (let i = 0; i < ArrayInput.length; i++) {
+                if (ArrayInput[i] % 2 == 0) {
+                    EvenArray.push(ArrayInput[i]);
+
+                }
+                else {
+                    OddArray.push(ArrayInput[i]);
+                }
             }
-
-        </script>
-
+            document.getElementById("EvenResult").innerText = "Even array is: " + EvenArray;
+            document.getElementById("OddResult").innerText = "odd array is: " + OddArray;
         }
-    </head>
-    <body>
-        <label>Enter the Array:</label>
-        <input type="text" id="array">
-        <br>
-        <button onclick="EvenOddSeparate()">Submit</button>
-        <h2 id="result"></h2>
-    </body>
+        console.log(EvenArray);
+        console.log(OddArray);
+    </script>
+</head>
+
+<body>
+    <label>Enter the array:</label>
+    <input type="text" id="userInput">
+    <button onclick="EvenOddSeparate()">Submit</button>
+    <div id="EvenResult"></div>
+    <div id="OddResult"></div>
+</body>
+
 </html>

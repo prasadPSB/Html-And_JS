@@ -11,7 +11,7 @@
             console.log('array: ', array);
 
             let doubledArrray = [];
-            for (i = 0; i < array.length; i++) {
+            for (let i = 0; i < array.length; i++) {
                 doubledArrray.push(array[i] * 2);
             }
             document.getElementById("result").innerText = "Result:" + doubledArrray.join(',');
@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <label for="arrayInput">Enter the numbers:</label>
+    <label>Enter the numbers:</label>
     <input type="text" id="arrayInput">
     <button onclick="processArray()">Submit</button>
     <span id="result"></span>
